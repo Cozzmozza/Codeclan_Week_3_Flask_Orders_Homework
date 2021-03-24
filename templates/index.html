@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+        <h1> List of orders pending collection</h1>
+        <table style='border: 1px solid grey; border-spacing: 10px;'>
+            <tr style='text-align: left;'>
+                <th><b>Order ID</b></th>
+                <th><b>Customer Name</b></th>
+                <th><b>Order Date</b></th>
+                <th><b>Description</b></th>
+                <th><b>Quantity</b></th>
+                <th><b>Further Info</b></th>
+            </tr>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.order_id }}</td>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.order_date }}</td>
+                <td>{{ order.description }}</td>
+                <td>{{ order.quantity }}</td>
+                <td><a href='/orders/{{ orders.index(order) }}'>View Order</a></td>
+            </tr>
+            {% endfor %}
+        <table>
+ 
+</body>
+</html>

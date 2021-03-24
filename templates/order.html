@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{order.order_id}}</title>
+</head>
+<body>
+    <p>This order, ID: {{ order.order_id }}, is for {{ order.customer_name }}.
+        <br>
+        <br>
+        The order was placed on {{ order.order_date }}.
+        <br>
+        <br>
+        Item '{{ order.description }}', quantity of '{{ order.quantity }}', is still awaiting collection. 
+    </p>
+</body>
+</html>
